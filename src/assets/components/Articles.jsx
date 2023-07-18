@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
 import { getAllArticles } from "../../api"
 import "./css/articles.css"
-
+import ArticleCard from "./Article-Card";
+import { format } from 'date-fns';
 
 const Articles  = () => {
     const [articles, setArticles] = useState([])
@@ -18,7 +19,7 @@ const Articles  = () => {
         <main id="articles-main">
         {isLoading ? (
             <p>Loading...</p>
-          ) : null}
+          ) : false}
         <ul className="article-list">
           {articles.map(
             ({
@@ -29,19 +30,17 @@ const Articles  = () => {
               comment_count,
               created_at,
               topic,
-              votes,
+              votes
             }) => (
-              <li key={article_id} className="article">
-                <img src={article_img_url} alt={title} />
-                <div className="item-text">
-                  <h3>{title}</h3>
-                  <p>Author - {author}</p>
-                  <p> Topic - {topic}</p>
-                  <p>{created_at}</p>
-                  <p>Comments - {comment_count}</p>
-                  <p>Votes - {votes}</p>
-                </div>
-              </li>
+              <ArticleCard
+              key= {article_id}
+              title= {title}
+              author= {author}
+              article_img_url={article_img_url}
+              comment_count= {comment_count}
+              created_at={format(new Date(created_at), 'MMMM dd, yyyy - HH:mm:ss')}
+              topic={topic}
+              votes={votes}/>
             )
           )}
              </ul>
