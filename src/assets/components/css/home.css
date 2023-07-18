@@ -1,0 +1,14 @@
+.background{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    height: 84vh;
+    width: 100vw;
+    padding: 1rem;
+    background: #d3a653af;
+    color: rgb(169, 82, 19);
+    font-size: large;
+}
