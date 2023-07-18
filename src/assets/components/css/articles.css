@@ -1,0 +1,39 @@
+#articles-main{
+    background: #d3a653af;;
+    color: rgb(169, 82, 19);
+    display: flex;
+    flex-direction: column;
+}
+
+.article{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.article:hover{
+    background: rgba(148, 43, 5, 0.359);
+    color: #fffffff4;
+}
+img{
+    height: 150px;
+    width: 150px;
+    border-radius: 100rem;
+    border: 2px solid rgb(169, 82, 19);
+}
+.item-text{
+    padding: 1rem;
+    width: 50vw;
+}
+
+
+#articles-main h2{
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+
+}
