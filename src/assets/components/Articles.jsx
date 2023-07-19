@@ -5,20 +5,17 @@ import ArticleCard from "./Article-Card";
 import { format } from 'date-fns';
 import { Link } from "react-router-dom";
 
-const Articles  = ({isLoading, setIsLoading}) => {
+const Articles  = () => {
     const [articles, setArticles] = useState([])
 
 
     useEffect(() => {
         getAllArticles().then((articlesData) => {
             setArticles(articlesData)
-                setIsLoading(false)
         })
     }, [])
 
-    {isLoading ? (
-      <p>Loading...</p>
-    ) : false}
+
 
     return (
         <main id="articles-main">

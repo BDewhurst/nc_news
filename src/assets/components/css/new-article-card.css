@@ -5,7 +5,7 @@
     height: 84vh
 }
 
-#single-article{
+#article-comments{
     background: #d3a653af;
     color: rgb(169, 82, 19);
     display: flex;
@@ -13,8 +13,8 @@
 
 }
 
-#articles-main h2{
-    height: 8vh;
+#article-comments h3{
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,9 +23,19 @@
 
 }
 
-.image{
-    height: 200px;
-    width: 200px;
-    border-radius: 100rem;
-    border: 2px solid rgb(169, 82, 19);
+#article-comments h4{
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem; 
+    line-height: 1.5em
+}
+
+#article-comments p{
+    padding: 0.5rem; 
+    line-height: 1em; 
+    display: flex;
+    justify-content: left;
 }
