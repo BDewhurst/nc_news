@@ -4,6 +4,7 @@ const NewArticleCard = ({ author,
     article_img_url,
     created_at,
     topic,
+    body,
     votes }) => {
   
   
@@ -18,6 +19,7 @@ const NewArticleCard = ({ author,
           <p> Topic - {topic}</p>
           <p>Posted on: {created_at}</p>
           <p>Votes - {votes}</p>
+          <p>{body}</p>
         </div>
       </li>
     )

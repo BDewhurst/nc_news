@@ -34,6 +34,7 @@ export const SingleArticle = ({isLoading, setIsLoading}) => {
               comment_count,
               created_at,
               topic,
+              body,
               votes
             }) => (
               <NewArticleCard
@@ -44,7 +45,8 @@ export const SingleArticle = ({isLoading, setIsLoading}) => {
               comment_count= {comment_count}
               created_at={format(new Date(created_at), 'MMMM dd, yyyy - HH:mm:ss')}
               topic={topic}
-              votes={votes}/>
+              votes={votes}
+              body= {body}/>
             )
           )}
              </ul>
