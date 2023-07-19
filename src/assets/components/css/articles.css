@@ -1,8 +1,9 @@
 #articles-main{
-    background: #d3a653af;;
+    background: #d3a653af;
     color: rgb(169, 82, 19);
     display: flex;
     flex-direction: column;
+    background-color: #d3a653af;
 }
 
 .article{
@@ -37,3 +38,8 @@ img{
     padding: 1rem;
 
 }
+
+.custom-link {
+    text-decoration: none;
+    color: inherit;
+  }

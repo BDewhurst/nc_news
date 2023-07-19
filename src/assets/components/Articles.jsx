@@ -3,10 +3,11 @@ import { getAllArticles } from "../../api"
 import "./css/articles.css"
 import ArticleCard from "./Article-Card";
 import { format } from 'date-fns';
+import { Link } from "react-router-dom";
 
-const Articles  = () => {
+const Articles  = ({isLoading, setIsLoading}) => {
     const [articles, setArticles] = useState([])
-    const [isLoading , setIsLoading] = useState(true);
+
 
     useEffect(() => {
         getAllArticles().then((articlesData) => {
@@ -15,11 +16,13 @@ const Articles  = () => {
         })
     }, [])
 
+    {isLoading ? (
+      <p>Loading...</p>
+    ) : false}
+
     return (
         <main id="articles-main">
-        {isLoading ? (
-            <p>Loading...</p>
-          ) : false}
+
         <ul className="article-list">
           {articles.map(
             ({
@@ -32,15 +35,17 @@ const Articles  = () => {
               topic,
               votes
             }) => (
+              <Link key ={article_id} to={`${article_id}`} className="custom-link">
               <ArticleCard
               key= {article_id}
               title= {title}
-              author= {author}
-              article_img_url={article_img_url}
+              author= {author} 
+              article_img_url={article_img_url}  
               comment_count= {comment_count}
               created_at={format(new Date(created_at), 'MMMM dd, yyyy - HH:mm:ss')}
               topic={topic}
               votes={votes}/>
+              </Link>
             )
           )}
              </ul>
