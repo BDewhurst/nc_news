@@ -13,7 +13,7 @@ export const SingleArticle = () => {
  
   const [individualArticle, setIndividualArticle] = useState([])
   const [comments, setComments] = useState([])
-
+  const [noComments, setNoComments] = useState(false);
 
  
 
@@ -28,6 +28,7 @@ export const SingleArticle = () => {
   useEffect(() => {
     getCommentsById(article_id).then((commentData) => {
       setComments(commentData)
+      setNoComments(commentData.length === 0);
       })
 }, [])
 
@@ -66,18 +67,21 @@ export const SingleArticle = () => {
       <h5>Comments</h5>
       <br>
       </br>
-        {comments.map(({ comment_id, body, author, created_at, votes }) => (
-          <CommentCard
-            key={comment_id}
-            body={body}
-            author={author}
-            created_at={format(new Date(created_at), 'MMMM dd, yyyy - HH:mm:ss')}
-            votes={votes} />
-        ))}
-
+      {noComments ? (
+          <p id ="no-comment">Be the first to comment...</p>
+        ) :  (
+          comments.map(({ comment_id, body, author, created_at, votes }) => (
+            <CommentCard
+              key={comment_id}
+              body={body}
+              author={author}
+              created_at={format(new Date(created_at), 'MMMM dd, yyyy - HH:mm:ss')}
+              votes={votes}
+            />
+          ))
+        )}
       </ul>
     </main>
-      
   );
 };
 

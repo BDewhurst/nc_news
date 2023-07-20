@@ -14,7 +14,7 @@
 }
 
 #article-comments h3{
-    height: 10vh;
+    height: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +24,7 @@
 }
 
 #article-comments h4{
-    height: 12vh;
+    height: 6vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,4 +69,12 @@
     border-bottom: solid;
     padding-bottom: 1rem;
     font-size: 3rem
+}
+
+#no-comment{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem
 }
