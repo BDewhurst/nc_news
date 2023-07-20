@@ -5,7 +5,7 @@
     height: 84vh
 }
 
-#single-article{
+#article-comments{
     background: #d3a653af;
     color: rgb(169, 82, 19);
     display: flex;
@@ -13,7 +13,7 @@
 
 }
 
-#articles-main h2{
+#article-comments h3{
     height: 8vh;
     display: flex;
     justify-content: center;
@@ -23,9 +23,58 @@
 
 }
 
-.image{
-    height: 200px;
-    width: 200px;
-    border-radius: 100rem;
-    border: 2px solid rgb(169, 82, 19);
+#article-comments h4{
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem; 
+    line-height: 1.5em
+}
+
+#article-comments p{
+    padding: 0.5rem; 
+    line-height: 1em; 
+    display: flex;
+    justify-content: left;
+}
+
+#new-comment {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.new-comment{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid;
+
+}
+
+.new-comment:hover {
+    background: rgba(148, 43, 5, 0.359);
+    color: #fffffff4;
+}
+
+#article-comments h5{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid;
+    padding-bottom: 1rem;
+    font-size: 3rem
+}
+
+#no-comment{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem
 }
