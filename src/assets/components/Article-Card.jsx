@@ -21,7 +21,7 @@ const ArticleCard = ({ author,
         <p> Topic - {topic}</p>
         <p>Posted on: {created_at}</p>
         <p>Comments - {comment_count}</p>
-        <p>Votes - {votes}</p>
+        <p>Votes : {votes}</p>
       </div>
     </li>
   )

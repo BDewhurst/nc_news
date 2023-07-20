@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { useParams } from 'react-router-dom';
 import NewArticleCard from "./New-Article-Card";
-import { getArticleById, getCommentsById } from "../../api";
-import { format, setSeconds } from 'date-fns';
+import { getArticleById, getCommentsById, voteOnArticleById } from "../../api";
+import { format } from 'date-fns';
 import "./css/new-article-card.css";
 import CommentCard from "./Comment-Card";
 
@@ -14,14 +14,12 @@ export const SingleArticle = () => {
   const [individualArticle, setIndividualArticle] = useState([])
   const [comments, setComments] = useState([])
   const [noComments, setNoComments] = useState(false);
-
+  const [votes, setVotes] = useState(0)
  
 
   useEffect(() => {
     getArticleById(article_id).then((articleData) => {
-      setIndividualArticle(articleData)
-
-    
+      setIndividualArticle(articleData) 
     })
   }, [article_id])
 
@@ -33,6 +31,18 @@ export const SingleArticle = () => {
 }, [])
 
 
+const handleUpVotes = () => {
+  voteOnArticleById(article_id, 1).then(()=> {
+    setVotes((votes) => votes + 1);
+  })
+
+};
+const handleDownVotes = () => {
+  voteOnArticleById(article_id, -1).then(()=> {
+    setVotes((votes) => votes - 1);
+  })
+  
+}
 
 
     return (
@@ -59,9 +69,15 @@ export const SingleArticle = () => {
               created_at={format(new Date(created_at), 'MMMM dd, yyyy - HH:mm:ss')}
               topic={topic}
               votes={votes}
-              body={body} />
+              body={body} 
+              />
           )
         )}
+       <h6 id="vote-header">Give us your opinion!</h6>
+          <div id='buttons'>
+        <button onClick= {handleUpVotes} id="upvote">Upvote</button>
+        <button onClick={handleDownVotes}id="downvote">Downvote</button>
+        </div>
       </ul>
       <ul className="comments">
       <h5>Comments</h5>

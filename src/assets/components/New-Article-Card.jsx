@@ -23,7 +23,7 @@ const NewArticleCard = ({ author,
           <p>Author - {author}</p>
           <p> Topic - {topic}</p>
           <p>Posted on: {created_at}</p>
-          <p>Votes - {votes}</p>
+          <p>Votes : {votes}</p>
         </div>
       </li>
     )

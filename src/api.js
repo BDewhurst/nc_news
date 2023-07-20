@@ -21,3 +21,11 @@ export const getCommentsById = (article_id) => {
         return res.data.comments
     })
 }
+
+export const voteOnArticleById = (article_id, votes) => {
+    return ncNewsApi.patch(`/articles/${article_id}`, {"inc_vote": votes}).then((res) => {
+        return res.data
+    }).catch((err) => {
+        console.log(err)
+    })
+}
