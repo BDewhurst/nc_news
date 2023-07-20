@@ -39,3 +39,34 @@
     display: flex;
     justify-content: left;
 }
+
+#new-comment {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.new-comment{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid;
+
+}
+
+.new-comment:hover {
+    background: rgba(148, 43, 5, 0.359);
+    color: #fffffff4;
+}
+
+#article-comments h5{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid;
+    padding-bottom: 1rem;
+    font-size: 3rem
+}

@@ -7,16 +7,18 @@ import { Link } from "react-router-dom";
 
 const Articles  = () => {
     const [articles, setArticles] = useState([])
+    const [articlesLoading, setArticlesLoading ] = useState(true)
 
 
     useEffect(() => {
         getAllArticles().then((articlesData) => {
             setArticles(articlesData)
+            setArticlesLoading(false)
         })
     }, [])
 
 
-
+    if (articlesLoading) return <p>Loading...</p>
     return (
         <main id="articles-main">
 

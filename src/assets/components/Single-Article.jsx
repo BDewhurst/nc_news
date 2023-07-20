@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useParams } from 'react-router-dom';
 import NewArticleCard from "./New-Article-Card";
 import { getArticleById, getCommentsById } from "../../api";
-import { format } from 'date-fns';
+import { format, setSeconds } from 'date-fns';
 import "./css/new-article-card.css";
 import CommentCard from "./Comment-Card";
 
@@ -14,11 +14,13 @@ export const SingleArticle = () => {
   const [individualArticle, setIndividualArticle] = useState([])
   const [comments, setComments] = useState([])
 
+
  
 
   useEffect(() => {
     getArticleById(article_id).then((articleData) => {
       setIndividualArticle(articleData)
+
     
     })
   }, [article_id])
@@ -30,8 +32,7 @@ export const SingleArticle = () => {
 }, [])
 
 
-  
- 
+
 
     return (
     <main id="article-comments">
@@ -62,13 +63,15 @@ export const SingleArticle = () => {
         )}
       </ul>
       <ul className="comments">
-        {comments.map(({ article_id, comment_id, body, author, created_at, votes }) => (
+      <h5>Comments</h5>
+      <br>
+      </br>
+        {comments.map(({ comment_id, body, author, created_at, votes }) => (
           <CommentCard
             key={comment_id}
-            article_id={article_id}
             body={body}
             author={author}
-            created_at={created_at}
+            created_at={format(new Date(created_at), 'MMMM dd, yyyy - HH:mm:ss')}
             votes={votes} />
         ))}
 

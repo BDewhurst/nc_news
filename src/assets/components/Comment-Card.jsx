@@ -3,7 +3,6 @@ const CommentCard = ({ author,
     votes,
     created_at,
     comment_id,
-    article_id
 }) => {
     return (
         <li key={comment_id} className="new-comment">
@@ -12,7 +11,6 @@ const CommentCard = ({ author,
           <p>Author - {author}</p>
           <p>Posted on: {created_at}</p>
           <p>Votes - {votes}</p>
-          <p>{article_id}</p>
         </div>
       </li>
     )
