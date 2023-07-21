@@ -15,13 +15,15 @@ export const SingleArticle = () => {
   const [comments, setComments] = useState([])
   const [noComments, setNoComments] = useState(false);
   const [votes, setVotes] = useState(0)
+
  
 
   useEffect(() => {
     getArticleById(article_id).then((articleData) => {
       setIndividualArticle(articleData) 
+      setVotes(articleData.votes);
     })
-  }, [article_id])
+  }, [article_id, votes])
 
   useEffect(() => {
     getCommentsById(article_id).then((commentData) => {
@@ -39,7 +41,7 @@ const handleUpVotes = () => {
 };
 const handleDownVotes = () => {
   voteOnArticleById(article_id, -1).then(()=> {
-    setVotes((votes) => votes - 1);
+    setVotes((votes) => votes - 1)
   })
   
 }
