@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 84vh
+    height: 100vh;
 }
 
 #article-comments{
@@ -14,32 +14,36 @@
 }
 
 #article-comments h3{
-    height: 8vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 1rem;
-    margin: 1rem;
+    margin: 1rem 0; /* Adjust margin for better spacing around the title */
+    line-height: 1.2; 
 
 }
 
 #article-comments h4{
-    height: 6vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 2rem; 
-    line-height: 1.5em;
-    margin: 1rem;
+    padding: 1rem; 
+    line-height: 1.5; 
+    margin: 1em 0; 
 }
 
-#article-comments p{
-    padding: 0.5rem; 
-    line-height: 1em; 
-    display: flex;
-    justify-content: left;
+#article-comments p {
+        height: auto; 
+        padding: 0.1rem;
+        line-height: 1.5; 
+        display: flex;
+        justify-content: left;
+        margin: 0.5em 0; 
+    
 }
 
 #new-comment {
@@ -64,6 +68,7 @@
 }
 
 #article-comments h5{
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -82,6 +87,7 @@
 }
 
 #buttons{
+    height: auto;
     text-align: center;
     text-decoration: none;
     display: flex;
@@ -95,6 +101,7 @@
     margin: 1rem;
     border-radius: 75%;
     transition-duration: 0.4s;
+    font-family: "Helvetica Neue", Arial, sans-serif;
    
 }
 
@@ -104,18 +111,21 @@ padding: 1rem;
 margin: 1rem;
 border-radius: 80%;
 transition-duration: 0.4s;
+font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
 #downvote:hover{
     background-color: rgb(186, 138, 104);
     color: white;
     border: solid #d3a653af;
+
     
 }
 #upvote:hover{
     background-color: rgb(186, 138, 104);
     color: white;
     border: solid #d3a653af;
+   
   
 }
 
@@ -126,4 +136,25 @@ transition-duration: 0.4s;
     align-items: center;
     text-align:center;
     font-size: 1rem
+}
+
+#image {
+    justify-content: left;
+    height: 50vh;
+    width: auto;
+    max-width: 40vw; 
+    position: relative;
+    top: -20vh;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+    opacity: 0.9;
+    filter: brightness(110%) contrast(110%) saturate(120%);
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease;
+}
+
+#image:hover {
+    transform: scale(1.1);
 }

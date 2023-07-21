@@ -11,7 +11,7 @@ const NewArticleCard = ({ author,
   
     return (
       <li key={article_id} className="new-article">
-        <img src={article_img_url} alt={title} 
+        <img id="image" src={article_img_url} alt={title} 
         />
         <div className="item-text">
           <h3>{title}</h3>
