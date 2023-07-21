@@ -1,0 +1,27 @@
+#comment-poster {
+height: auto;
+justify-content: space-around;
+text-align: space-around;
+margin: 4em;
+display: flex;
+flex-direction: column;
+border: solid;
+align-items: space-around;
+padding: 4em;
+}
+
+#username {
+margin: 1em;
+}
+
+#comment{
+margin: 1em;
+}
+
+#add-comment-button{
+    margin: 2em;
+    font-size: 20px;
+}
+#comment-poster h6{
+    font-size: 2em;
+}

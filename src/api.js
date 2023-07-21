@@ -6,7 +6,6 @@ const ncNewsApi = axios.create ({
 
 export const getAllArticles = () => {
     return ncNewsApi.get(`/articles`).then((res) => {
-        console.log(res.data.articles)
         return res.data.articles
     })
 }
@@ -29,7 +28,8 @@ export const voteOnArticleById = (article_id, votes) => {
 }
 
 export const postComment = (newComment, article_id) => {
-    return ncNewsApi.post(`/articles/${article_id}`, {newComment: newComment}).then((res)=> {
+    return ncNewsApi.post(`/articles/${article_id}/comments`, newComment).then((res)=> {
+        console.log(newComment)
         return res.data
     })
 }
