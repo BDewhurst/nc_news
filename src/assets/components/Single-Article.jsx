@@ -5,6 +5,7 @@ import { getArticleById, getCommentsById, voteOnArticleById } from "../../api";
 import { format } from 'date-fns';
 import "./css/new-article-card.css";
 import CommentCard from "./Comment-Card";
+import CommentAdder from "./Comment-Adder-Card";
 
 
 export const SingleArticle = () => {
@@ -16,7 +17,6 @@ export const SingleArticle = () => {
   const [noComments, setNoComments] = useState(false);
   const [votes, setVotes] = useState(0)
 
- 
 
   useEffect(() => {
     getArticleById(article_id).then((articleData) => {
@@ -68,7 +68,7 @@ const handleDownVotes = () => {
               author={author}
               article_img_url={article_img_url}
               comment_count={comment_count}
-              created_at={format(new Date(created_at), 'MMMM dd, yyyy - HH:mm:ss')}
+              created_at={format(new Date(created_at), 'MMMM, dd, yyyy - HH:mm:ss')}
               topic={topic}
               votes={votes}
               body={body} 
@@ -81,6 +81,7 @@ const handleDownVotes = () => {
         <button onClick={handleDownVotes}id="downvote">Downvote</button>
         </div>
       </ul>
+      <CommentAdder setComments={setComments}/>
       <ul className="comments">
       <h5>Comments</h5>
       <br>
@@ -88,15 +89,16 @@ const handleDownVotes = () => {
       {noComments ? (
           <p id ="no-comment">Be the first to comment...</p>
         ) :  (
-          comments.map(({ comment_id, body, author, created_at, votes }) => (
+          comments.map(({ comment_id, body, author, created_at, votes }) => {
+            return (
             <CommentCard
               key={comment_id}
               body={body}
               author={author}
-              created_at={format(new Date(created_at), 'MMMM dd, yyyy - HH:mm:ss')}
+              created_at={format(new Date(created_at), 'MMMM, dd, yyyy - HH:mm:ss')}
               votes={votes}
             />
-          ))
+          )})
         )}
       </ul>
     </main>

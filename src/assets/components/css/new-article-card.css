@@ -91,40 +91,45 @@
     text-align: center;
     text-decoration: none;
     display: flex;
-    font-size: 20px; 
     justify-content: center;
 }
 
 #upvote{
-    background-color: rgb(193, 109, 20);
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 75%;
-    transition-duration: 0.4s;
+    background-color: rgb(28, 154, 5);
+    padding: 2rem;
+    margin: 2rem;
+    transition: transform 0.4s ease;
     font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 20px; 
+    color: white;
+    border-radius: 8px;
    
 }
 
 #downvote{
-background-color: rgb(193, 109, 20);
-padding: 1rem;
-margin: 1rem;
-border-radius: 80%;
-transition-duration: 0.4s;
+background-color: rgb(193, 20, 20);
+padding: 2rem;
+margin: 2rem;
+border-radius: 8px;
+transition: transform 0.4s ease;
 font-family: "Helvetica Neue", Arial, sans-serif;
+font-size: 20px; 
+color: white;
 }
 
 #downvote:hover{
-    background-color: rgb(186, 138, 104);
+    background-color: rgb(136, 22, 5);
     color: white;
     border: solid #d3a653af;
+    transform: scale(1.1);
 
     
 }
 #upvote:hover{
-    background-color: rgb(186, 138, 104);
+    background-color: rgb(22, 108, 7);
     color: white;
     border: solid #d3a653af;
+    transform: scale(1.1);
    
   
 }
@@ -135,7 +140,7 @@ font-family: "Helvetica Neue", Arial, sans-serif;
     justify-content: center;
     align-items: center;
     text-align:center;
-    font-size: 1rem
+    font-size: 2rem;
 }
 
 #image {
