@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from 'react-router-dom';
 import NewArticleCard from "./New-Article-Card";
-import { getArticleById, getCommentsById, voteOnArticleById } from "../../api";
+import { getArticleById, voteOnArticleById } from "../../api";
 import { format } from 'date-fns';
 import "./css/new-article-card.css";
 import CommentCard from "./Comment-Card";
@@ -25,12 +25,7 @@ export const SingleArticle = () => {
     })
   }, [article_id, votes])
 
-  useEffect(() => {
-    getCommentsById(article_id).then((commentData) => {
-      setComments(commentData)
-      setNoComments(commentData.length === 0);
-      })
-}, [])
+
 
 
 const handleUpVotes = () => {
@@ -43,8 +38,9 @@ const handleDownVotes = () => {
   voteOnArticleById(article_id, -1).then(()=> {
     setVotes((votes) => votes - 1)
   })
-  
+
 }
+
 
 
     return (
@@ -83,23 +79,14 @@ const handleDownVotes = () => {
       </ul>
       <CommentAdder setComments={setComments}/>
       <ul className="comments">
-      <h5>Comments</h5>
       <br>
       </br>
-      {noComments ? (
-          <p id ="no-comment">Be the first to comment...</p>
-        ) :  (
-          comments.map(({ comment_id, body, author, created_at, votes }) => {
-            return (
             <CommentCard
-              key={comment_id}
-              body={body}
-              author={author}
-              created_at={format(new Date(created_at), 'MMMM, dd, yyyy - HH:mm:ss')}
-              votes={votes}
+           setComments={setComments}
+           setNoComments={setNoComments}
+           comments={comments}
+           article_id={article_id}
             />
-          )})
-        )}
       </ul>
     </main>
   );

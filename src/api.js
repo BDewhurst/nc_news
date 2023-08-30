@@ -16,6 +16,7 @@ export const getArticleById = (article_id) => {
 }
 
 export const getCommentsById = (article_id) => {
+    console.log(article_id)
     return ncNewsApi.get (`/articles/${article_id}/comments`).then((res)=> {
         return res.data.comments
     })
@@ -29,7 +30,14 @@ export const voteOnArticleById = (article_id, votes) => {
 
 export const postComment = (newComment, article_id) => {
     return ncNewsApi.post(`/articles/${article_id}/comments`, newComment).then((res)=> {
-        console.log(newComment)
         return res.data
+    })
+}
+
+export const deleteCommentById = (comment_id) => {
+    console.log(comment_id)
+    return ncNewsApi.delete(`articles/comments/${comment_id}`).then((res)=> {
+        console.log(res)
+        return res
     })
 }
