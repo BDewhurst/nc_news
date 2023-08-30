@@ -1,21 +1,30 @@
-import { useEffect} from "react"
-import {getCommentsById} from "../../api"
+import { useEffect } from "react"
+import { deleteCommentById, getCommentsById } from "../../api"
 import { format } from 'date-fns';
 
+
 const CommentCard = ({
-  comments, 
-  setComments, 
-    article_id, 
+  comments,
+  setComments,
+  article_id,
+  setNoComments
 }) => {
-  
+
   useEffect(() => {
     getCommentsById(article_id).then((commentData) => {
       setComments(commentData)
       setNoComments(commentData.length === 0);
-  })
-}, [article_id])
+    })
+  }, [article_id])
 
-
+  const handleDelete = (comment_id) => {
+    deleteCommentById(comment_id).then(() => {
+      getCommentsById(article_id)
+      .then((updatedCommentData) => {
+        setComments(updatedCommentData);
+      })
+    })
+  }
 
   return (
     <ul className="comments">
@@ -31,7 +40,7 @@ const CommentCard = ({
               <p>Author - {author}</p>
               <p>Posted on: {format(new Date(created_at), 'MMMM, dd, yyyy - HH:mm:ss')}</p>
               <p>Votes - {votes}</p>
-              <button>Delete Comment</button>
+              <button onClick={() => handleDelete(comment_id)}>Delete Comment</button>
             </div>
           </li>
         ))
@@ -40,4 +49,4 @@ const CommentCard = ({
   );
 };
 
-    export default CommentCard
+export default CommentCard
