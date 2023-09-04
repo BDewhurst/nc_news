@@ -4,11 +4,25 @@ const ncNewsApi = axios.create ({
     baseURL: "https://nc-news-ul5y.onrender.com/api"
 })
 
-export const getAllArticles = () => {
-    return ncNewsApi.get(`/articles`).then((res) => {
-        return res.data.articles
-    })
-}
+export const getAllArticles = (order, sort_by, topic) => {
+    const params = {};
+
+    if (order) {
+      params.order = order;
+    }
+    if (sort_by) {
+      params.sort_by = sort_by;
+    }
+    if (topic) {
+        params.topic = topic; 
+    }
+    return ncNewsApi.get("/articles", {
+        params: params, 
+      }).then((res)=> {
+        return res.data.articles;
+      });
+    }
+
 export const getArticleById = (article_id) => {
     return ncNewsApi.get(`/articles/${article_id}`).then((res) => {
         return res.data.article
