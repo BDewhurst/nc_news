@@ -12,7 +12,7 @@ export const SingleArticle = () => {
   const { article_id } = useParams()
   
  
-  const [individualArticle, setIndividualArticle] = useState([])
+  const [individualArticle, setIndividualArticle] = useState([]);
   const [comments, setComments] = useState([])
   const [noComments, setNoComments] = useState(false);
   const [votes, setVotes] = useState(0)
@@ -20,6 +20,7 @@ export const SingleArticle = () => {
 
   useEffect(() => {
     getArticleById(article_id).then((articleData) => {
+      console.log(articleData)
       setIndividualArticle(articleData) 
       setVotes(articleData.votes);
     })
@@ -40,8 +41,6 @@ const handleDownVotes = () => {
   })
 
 }
-
-
 
     return (
     <main id="article-comments">

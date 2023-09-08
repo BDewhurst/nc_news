@@ -1,4 +1,4 @@
-
+import { format } from 'date-fns';
 
 const ArticleCard = ({ author,
   title,
@@ -19,7 +19,7 @@ const ArticleCard = ({ author,
         <h2>{title}</h2>
         <p>Author - {author}</p>
         <p> Topic - {topic}</p>
-        <p>Posted on: {created_at}</p>
+        <p>Posted on: {format(new Date(created_at), 'MMMM, dd, yyyy - HH:mm:ss')}</p>
         <p>Comments - {comment_count}</p>
         <p>Votes : {votes}</p>
       </div>
