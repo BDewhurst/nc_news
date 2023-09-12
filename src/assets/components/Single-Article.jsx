@@ -20,7 +20,7 @@ export const SingleArticle = () => {
 
   useEffect(() => {
     getArticleById(article_id).then((articleData) => {
-      console.log(articleData)
+  
       setIndividualArticle(articleData) 
       setVotes(articleData.votes);
     })

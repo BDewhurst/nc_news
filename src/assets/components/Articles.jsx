@@ -47,7 +47,10 @@ const Articles  = () => {
         handleOrderChange={handleOrderChange}
         handleTopicChange={handleTopicChange}
       />
-    <ArticleList articles={articles} />
+    <ArticleList articles={articles}
+    order={order}
+    sort_by={sort_by}
+    topic={topic}/>
         </main>
       );
     };
