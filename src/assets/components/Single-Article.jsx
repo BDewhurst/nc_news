@@ -72,7 +72,7 @@ const handleDownVotes = () => {
         )}
        <h6 id="vote-header">Give us your opinion!</h6>
           <div id='buttons'>
-        <button onClick= {handleUpVotes} id="upvote">Upvote</button>
+        <button onClick= {handleUpVotes} id="upvote"> Upvote</button>
         <button onClick={handleDownVotes}id="downvote">Downvote</button>
         </div>
       </ul>
@@ -85,6 +85,8 @@ const handleDownVotes = () => {
            setNoComments={setNoComments}
            comments={comments}
            article_id={article_id}
+           votes={votes}
+           setVotes={setVotes}
             />
       </ul>
     </main>
