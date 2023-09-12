@@ -17,10 +17,10 @@ const ArticleCard = ({ author,
       />
       <div className="item-text">
         <h2>{title}</h2>
-        <p>Author - {author}</p>
-        <p> Topic - {topic}</p>
+        <p>Author: {author}</p>
+        <p> Topic:  {topic}</p>
         <p>Posted on: {format(new Date(created_at), 'MMMM, dd, yyyy - HH:mm:ss')}</p>
-        <p>Comments - {comment_count}</p>
+        <p>Comments:  {comment_count}</p>
         <p>Votes : {votes}</p>
       </div>
     </li>

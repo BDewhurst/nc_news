@@ -1,0 +1,61 @@
+
+#article-poster {
+    background-color: #d3a653af;; 
+    padding: 20px;
+    color: white; 
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:100vh;
+  }
+  
+
+  .article-adder {
+    width: 90%;
+    max-width: 400px;
+    background-color: #fff; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin: 15px; 
+  }
+  
+
+  #article-poster label {
+    display: block;
+    margin: 5px;
+    color: #8B4513;
+  }
+  
+
+  #article-poster input[type="text"],
+  #article-poster textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #8B4513;
+    border-radius: 4px;
+  }
+  
+  
+  #add-article-button {
+    background-color: #8B4513; 
+    color: white; 
+    border: none;
+    padding: 15px 30px; 
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 auto; 
+    display: block; 
+  }
+  
+  #add-article-button:hover {
+    background-color: #A0522D; 
+  }
+  #post-article-header {
+    font-size: 18px; 
+    color: #814316;
+    margin-bottom: 15px; 
+    text-align: center; 
+  }

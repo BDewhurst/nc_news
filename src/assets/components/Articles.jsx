@@ -50,8 +50,10 @@ const Articles  = () => {
     <ArticleList articles={articles}
     order={order}
     sort_by={sort_by}
-    topic={topic}/>
-        </main>
+    topic={topic}
+    setArticles={setArticles}
+    />
+    </main>
       );
     };
     

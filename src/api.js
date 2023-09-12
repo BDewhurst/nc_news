@@ -54,7 +54,7 @@ export const postComment = (newComment, article_id) => {
 }
 
 export const deleteCommentById = (comment_id) => {
-    return ncNewsApi.delete(`articles/comments/${comment_id}`).then((res)=> {
+    return ncNewsApi.delete(`/articles/comments/${comment_id}`).then((res)=> {
         return res
     })
 }
@@ -62,5 +62,11 @@ export const deleteCommentById = (comment_id) => {
 export const voteOnCommentById = (comment_id, votes) => {
 return ncNewsApi.patch(`/comments/${comment_id}`, {"inc_vote": votes}).then((res)=> {
 return res.data
-})
+    })
+}
+export const postAnArticle = (newArticle) => {
+    console.log(newArticle)
+    return ncNewsApi.post(`/articles`, newArticle).then((res)=> {
+        res.data
+    })
 }

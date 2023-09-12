@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import ArticleCard from './Article-Card';
 import { getAllArticles } from '../../api';
 
-const ArticleList = ({ order, sort_by, topic }) => {
-  const [articles, setArticles] = useState([]);
+const ArticleList = ({ order, sort_by, topic, articles, setArticles}) => {
   const [page, setPage] = useState(1);
 
   const limit = 10;
