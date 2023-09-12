@@ -1,47 +1,92 @@
 #comment-poster {
-    height: auto;
-    justify-content: space-around;
-    text-align: center;
-    margin: 4em;
-    display: flex;
-    flex-direction: column;
-    border: 2px solid #8B4513; 
-    background-color: #D2B48C; 
-    align-items: center;
-    padding: 2em;
-    border-radius: 10px;
-  }
-  
-  #username {
-    margin: 1em;
-    font-size: 18px;
-    color: #8B4513; 
-  }
-  
-  #comment {
-    margin: 1em;
-    font-size: 16px;
-    color: #A0522D; 
-  }
-  
-  #add-comment-button {
-    margin: 1em;
-    font-size: 20px;
-    background-color: #8B4513; 
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #add-comment-button:hover {
-    background-color: #A0522D; 
-  }
-  
-  #comment-poster h6 {
-    font-size: 24px;
-    color: #8B4513; 
-  }
-  
+  height: auto;
+  justify-content: space-around;
+  text-align: center;
+  margin: 4em;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #8B4513; 
+  background-color: #D2B48C; 
+  align-items: center;
+  padding: 2em;
+  border-radius: 10px;
+}
+
+#username {
+  margin: 1em;
+  font-size: 18px;
+  color: #8B4513; 
+}
+
+#comment {
+  margin: 1em;
+  font-size: 16px;
+  color: #A0522D; 
+}
+
+#add-comment-button {
+  margin: 1em;
+  font-size: 20px;
+  background-color: #8B4513; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#add-comment-button:hover {
+  background-color: #A0522D; 
+}
+
+#comment-poster h6 {
+  font-size: 24px;
+  color: #8B4513; 
+}
+#comment-poster {
+  height: auto;
+  justify-content: space-around;
+  text-align: center;
+  margin: 4em;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #8B4513;
+  background-color: #D2B48C;
+  align-items: center;
+  padding: 2em;
+  border-radius: 10px;
+}
+
+#username {
+  margin: 1em;
+  font-size: 18px;
+  color: #8B4513;
+}
+
+#comment {
+  margin: 1em;
+  font-size: 18px;
+  color: #A0522D;
+}
+
+#add-comment-button {
+  margin: 2em;
+  font-size: 20px;
+  background-color: #8B4513;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#add-comment-button:hover {
+  background-color: #A0522D;
+}
+
+#comment-poster h6 {
+  font-size: 25px;
+  color: #8B4513;
+}
