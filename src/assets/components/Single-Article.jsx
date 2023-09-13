@@ -76,7 +76,6 @@ const handleDownVotes = () => {
         <button onClick={handleDownVotes}id="downvote">Downvote</button>
         </div>
       </ul>
-      <CommentAdder setComments={setComments}/>
       <ul className="comments">
       <br>
       </br>
@@ -89,6 +88,7 @@ const handleDownVotes = () => {
            setVotes={setVotes}
             />
       </ul>
+      <CommentAdder setComments={setComments}/>
     </main>
   );
 };

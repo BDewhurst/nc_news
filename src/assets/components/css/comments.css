@@ -1,0 +1,67 @@
+.buttons-comments button {
+    margin: 1em auto; 
+    display: block; 
+  }
+
+.comment-delete-button{
+    margin: 1em auto;
+    padding: 1em;
+    font-size: 12px;
+    background-color: #8B4513;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+  
+  .comment-delete-button:hover {
+    background-color: #A0522D;
+    transform: scale(1.1);
+    border: solid #d3a653af;
+  }
+
+  .comment-downvote-button:hover{
+    background-color: rgb(193, 20, 20);
+    color: white;
+    border: solid #d3a653af;
+    transform: scale(1.1);
+}
+
+.comment-upvote-button:hover{
+    background-color: rgb(22, 108, 7);
+    color: white;
+    border: solid #d3a653af;
+    transform: scale(1.1);
+}
+
+.comment-upvote-button{
+    margin:1em;
+    padding:1em;
+    background-color: rgb(28, 154, 5);
+border-radius: 8px;
+transition: transform 0.4s ease;
+font-family: "Helvetica Neue", Arial, sans-serif;
+font-size: 12px; 
+color: white;
+}
+
+.buttons-comments {
+    margin: 1em;
+    }
+    
+    .comment-downvote-button{
+        margin:1em;
+        padding:1em;
+        background-color: rgb(193, 20, 20);
+    border-radius: 8px;
+    transition: transform 0.4s ease;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 12px; 
+    color: white;
+    }
+
+    .comment-body{
+    font-weight: normal; 
+    }

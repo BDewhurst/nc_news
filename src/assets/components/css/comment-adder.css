@@ -1,73 +1,47 @@
+
+
 #comment-poster {
-  height: auto;
-  justify-content: space-around;
-  text-align: center;
-  margin: 4em;
   display: flex;
   flex-direction: column;
-  border: 2px solid #8B4513; 
-  background-color: #D2B48C; 
   align-items: center;
-  padding: 2em;
-  border-radius: 10px;
-}
-
-#username {
-  margin: 1em;
-  font-size: 18px;
-  color: #8B4513; 
-}
-
-#comment {
-  margin: 1em;
-  font-size: 16px;
-  color: #A0522D; 
-}
-
-#add-comment-button {
-  margin: 1em;
-  font-size: 20px;
-  background-color: #8B4513; 
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#add-comment-button:hover {
-  background-color: #A0522D; 
-}
-
-#comment-poster h6 {
-  font-size: 24px;
-  color: #8B4513; 
-}
-#comment-poster {
-  height: auto;
-  justify-content: space-around;
-  text-align: center;
-  margin: 4em;
-  display: flex;
-  flex-direction: column;
-  border: 2px solid #8B4513;
   background-color: #D2B48C;
-  align-items: center;
-  padding: 2em;
   border-radius: 10px;
+  padding: 2em;
+  text-align: center;
+  margin: 2em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#username {
-  margin: 1em;
+#usernameLabel {
+  margin: 0.5em;
   font-size: 18px;
   color: #8B4513;
+  vertical-align: middle; 
+}
+
+#usernameInput {
+  margin: 1em; 
+  font-size: 18px;
+  padding: 5px;
+  border: 1px solid #8B4513;
+  border-radius: 5px;
+  vertical-align: middle; 
 }
 
 #comment {
-  margin: 1em;
+  margin: 0.5em; 
   font-size: 18px;
   color: #A0522D;
+  vertical-align: middle; 
+}
+
+#post-comment {
+  margin: 1em; 
+  font-size: 18px;
+  padding: 5px;
+  border: 1px solid #A0522D;
+  border-radius: 5px;
+  vertical-align: middle; 
 }
 
 #add-comment-button {
@@ -80,6 +54,7 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  vertical-align: middle; 
 }
 
 #add-comment-button:hover {
@@ -89,4 +64,5 @@
 #comment-poster h6 {
   font-size: 25px;
   color: #8B4513;
+  vertical-align: middle; 
 }

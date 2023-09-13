@@ -27,10 +27,10 @@ const CommentAdder = ({ setComments }) => {
         <main id="comment-poster">
             <h6>Post a comment</h6>
         <form className="comment-adder" onSubmit={handleSubmit}>
-             <label htmlFor="username" id="username">Username:</label>
+             <label htmlFor="usernameInput" id="usernameLabel">Username:</label>
       <input
         type="text"
-        id="username"
+        id="usernameInput"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
