@@ -21,7 +21,7 @@ const CommentAdder = ({ setComments }) => {
             })
             setNewComment("");
             setUsername("");
-        })
+        }), [newComment]
     }
     return (
         <main id="comment-poster">
